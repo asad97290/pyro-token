@@ -102,11 +102,8 @@ forge script script/Pyro.s.sol:PyroScript --broadcast --rpc-url $ALCHEMY_URL --p
 ```
 ### Verifiy
 ```shell
-forge verify-contract 0x34f973CF5f7807450451aB11Dc5515Ed8f996f53 ./src/Pyro.sol:Pyro --watch --verifier-url https://api.bscscan.com/api  --verifier-api-key $SCAN_API_KEY  --constructor-args-path constructor-args.txt
+forge verify-contract 0xcD5cc65a555581852fdddC384f95249Da22F0C17  ./src/Pyro.sol:Pyro --watch  --verifier etherscan --etherscan-api-key $SCAN_API_KEY --chain-id 97 --verifier-url https://api.etherscan.io/api --constructor-args-path constructor-args.txt
 ```
 
-
-
-forge verify-contract 0x4447695192c86D3c7bc207f46563942aE26e9EDa ./src/Pyro.sol:Pyro --watch --verifier-url https://api.bscscan.com/api  --verifier bscscan --etherscan-api-key UDW6XU5GJ192RMAXD75ICX24GAGZ71KWYW --chain-id 97 --constructor-args 0x000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000204fce5e3e25026110000000000000000000000000000000000000000000000000000000000000000000000f54657374205079726f20546f6b656e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009544553545f5059524f0000000000000000000000000000000000000000000000
 
 
