@@ -73,7 +73,8 @@ Provide:
 ## Usage
 ### Install
 ```shell
-$ forge install
+$ git rm -r --cached lib/openzeppelin-contractss
+$ forge install OpenZeppelin/openzeppelin-contracts@v4.9.6 --no-commit
 ```
 ### Build
 
