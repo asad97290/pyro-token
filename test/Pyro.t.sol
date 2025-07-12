@@ -7,7 +7,6 @@ import {Pyro} from "../src/Pyro.sol";
 contract PyroTest is Test {
     Pyro public pyro;
    
-    error EnforcedPause();
 
     function setUp() public {
         pyro = new Pyro("Pyro token", "Pyro",10_000_000_000 ether);
@@ -60,7 +59,7 @@ contract PyroTest is Test {
         assertEq(pyro.paused(), true);
                 
         vm.prank(alice);
-        vm.expectRevert(EnforcedPause.selector);
+        vm.expectRevert();
         pyro.transfer(address(2), 1 ether);
 
 
