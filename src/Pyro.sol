@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.25;
+pragma solidity 0.8.19;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
@@ -16,7 +16,7 @@ contract Pyro is
         string memory _symbol,
         uint256 initialSupply
     )
-        Ownable(msg.sender)
+        Ownable()
         ERC20(_name, _symbol)
     {}
 
@@ -51,17 +51,8 @@ contract Pyro is
     }
 
 
-  // override function
-    function _update(
-        address from,
-        address to,
-        uint256 value
-    )
-        internal
-        override(ERC20,ERC20Pausable)
-    {
-        super._update(from, to, value);
-    }
+ 
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal override(ERC20,ERC20Pausable) {}
 
  
 }
