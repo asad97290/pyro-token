@@ -1,0 +1,21 @@
+/target
+/out
+/cache
+/coverage
+lcov.info
+.DS_Store
+.env
+.vscode
+.password
+
+broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# storage layout checker library
+storage_check_cache
+storage_check_report
+src/artifacts
+compiler_config.json
+.states
+.deps
